@@ -65,3 +65,20 @@ int countPrimes(int a, int b){
   return count;
 }
 
+//Task E
+bool isTwinPrime(int n){
+  if(isPrime(n) == 1){
+    
+    if(isPrime(n+2) == 1 || isPrime(n-2) == 1){
+      return 1;
+    }else{
+      return 0;
+    }
+    
+  }else{
+    
+    std::cout << "inputted value is not a prime number" << std::endl;
+    return 0;
+  }
+}
+    

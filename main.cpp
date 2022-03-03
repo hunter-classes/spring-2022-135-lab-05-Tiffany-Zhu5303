@@ -36,6 +36,13 @@ int main()
 
   count = countPrimes(b, c);
   std::cout << "There are " << count << " primes from " << b << " to " << c << std::endl;
-  
+
+  //Task E
+  bool twin = isTwinPrime(a);
+  std::cout << "\nFor " << a << " the twin prime is " << twin << std::endl;
+
+  twin = isTwinPrime(23);
+  std::cout << "For 23 the twin prime is " << twin << std::endl;
+    
   return 0;
 }

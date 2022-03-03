@@ -56,6 +56,16 @@ TEST_CASE("the next prime"){
 
 TEST_CASE("number of primes"){
   CHECK(countPrimes(4, 18) == 5);
-  CHECK(countPrimes(16, 22) == 3);
-  CHECK(countPrimes(633, 814) == 25);
+  CHECK(countPrimes(16, 22) == 2);
+  CHECK(countPrimes(633, 814) == 26);
+}
+
+TEST_CASE("is twin prime"){
+  CHECK(isTwinPrime(199) == 1);
+  CHECK(isTwinPrime(2111) == 1);
+}
+
+TEST_CASE("is not twin prime"){
+  CHECK(isTwinPrime(1561) == 0);
+  CHECK(isTwinPrime(2003) == 0);
 }

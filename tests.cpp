@@ -2,4 +2,47 @@
 #include "doctest.h"
 #include "funcs.h"
 
-// add your tests here
+TEST_CASE("divisible integers"){
+  //positives
+  CHECK(isDivisibleBy(50, 5) == true);
+  //positive and negative
+  CHECK(isDivisibleBy(-100, 10) == true);
+  //zero
+  CHECK(isDivisibleBy(0, 20) == true);
+  //negatives
+  CHECK(isDivisibleBy(-180, -3) == true);
+}
+
+TEST_CASE("not divisible integers"){
+  //positives
+  CHECK(isDivisibleBy(18, 4) == false);
+  //negative and positive
+  CHECK(isDivisibleBy(-20, 3) == false);
+  //undefined
+  //CHECK(isDivisibleBy(18, 0) == false); -> cannot be done; test crashed
+  //negatives
+  CHECK(isDivisibleBy(-5, -3) == false);
+  //fractions
+  CHECK(isDivisibleBy(1, 2) == false);
+}
+
+TEST_CASE("is prime - smaller"){
+  CHECK(isPrime(2) == true);
+  CHECK(isPrime(3) == true);
+  CHECK(isPrime(5) == true);
+  CHECK(isPrime(7) == true);
+}
+
+TEST_CASE("is prime - larger"){
+  CHECK(isPrime(47) == true);
+  CHECK(isPrime(97) == true);
+  CHECK(isPrime(331) == true);
+  CHECK(isPrime(1303) == true);
+}
+
+TEST_CASE("the next prime"){
+  CHECK(nextPrime(0) == 2);
+  CHECK(nextPrime(3) == 5);
+  CHECK(nextPrime(9) == 11);
+  CHECK(nextPrime(810) == 811);
+}

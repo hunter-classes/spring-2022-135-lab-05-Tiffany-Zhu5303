@@ -40,9 +40,22 @@ TEST_CASE("is prime - larger"){
   CHECK(isPrime(1303) == true);
 }
 
+TEST_CASE("is not prime"){
+  CHECK(isPrime(4) == false);
+  CHECK(isPrime(18) == false);
+  CHECK(isPrime(22) == false);
+  CHECK(isPrime(1220) == false);
+}
+
 TEST_CASE("the next prime"){
   CHECK(nextPrime(0) == 2);
   CHECK(nextPrime(3) == 5);
   CHECK(nextPrime(9) == 11);
   CHECK(nextPrime(810) == 811);
+}
+
+TEST_CASE("number of primes"){
+  CHECK(countPrimes(4, 18) == 5);
+  CHECK(countPrimes(16, 22) == 3);
+  CHECK(countPrimes(633, 814) == 25);
 }

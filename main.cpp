@@ -29,6 +29,13 @@ int main()
 
   next = nextPrime(c);
   std::cout << "The next prime of " << c << " is: " << next << std::endl;
+
+  //Task D
+  int count = countPrimes(d, a);
+  std::cout << "\nThere are " << count << " primes from " << d << " to " << a << std::endl;
+
+  count = countPrimes(b, c);
+  std::cout << "There are " << count << " primes from " << b << " to " << c << std::endl;
   
   return 0;
 }

@@ -14,17 +14,23 @@ bool isDivisibleBy(int n, int d){
 //Task B:
 bool isPrime(int n){
   if(n == 2){
+    
     return true;
+    
   }else if( n <= 1){
+    
     return false;
+    
   }else{
+    
     for(int i = 2; i < n; i++){
       if(n % i == 0){
+	
 	return false;
-      }else{
-	i++;
+	
       }
     }
+    
     return true;
   }
 }
@@ -44,5 +50,18 @@ int nextPrime(int n){
   }while(value == false);
 
   return next;
+}
+
+//Task D
+int countPrimes(int a, int b){
+  int count = 0;
+  
+  for(int i = a; i <= b; i++){
+    if(isPrime(i) == true){
+      count += 1;
+    }
+  }
+
+  return count;
 }
 

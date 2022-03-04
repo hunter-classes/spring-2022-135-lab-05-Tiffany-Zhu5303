@@ -43,7 +43,6 @@ int nextPrime(int n){
   do{
     if(isPrime(next) == true){
       value = true;
-      return next;
     }else{
       next += 1;
     }
@@ -77,8 +76,42 @@ bool isTwinPrime(int n){
     
   }else{
     
-    std::cout << "inputted value is not a prime number" << std::endl;
-    return 0;
+     return 0;
+     
   }
 }
+
+//Task F
+int nextTwinPrime(int n){
+  bool gotIt = false;
+  int next = n + 1;
+
+  do{
+    if(isTwinPrime(next) == true){
+      gotIt = true;
+    }else{
+      next += 1;
+    }
+  }while(gotIt == false);
+
+  return next;
+}
+
+//Task G
+int largestTwinPrime(int a, int b){
+  int biggest = 0;
+  
+  for(int i = a; i <= b; i++){
     
+    if(isTwinPrime(i) == true){
+      biggest = i;
+      
+    }
+  }
+  
+  if(biggest > 0){
+    return biggest;
+  }else{
+    return -1;
+      }
+}

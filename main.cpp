@@ -11,6 +11,8 @@ int main()
   c = 18;
   d = 2;
 
+  std::cout << "Note: 0 means false and 1 means true as boolean values" << std::endl;
+
   //Task A
   bool divisibility = isDivisibleBy(a, b);
   std::cout << "The divisibility of " << a << " and " << b << ": " << divisibility << std::endl;
@@ -39,10 +41,24 @@ int main()
 
   //Task E
   bool twin = isTwinPrime(a);
-  std::cout << "\nFor " << a << " the twin prime is " << twin << std::endl;
+  std::cout << "\nIs " << a << " a twin prime: " << twin << std::endl;
 
   twin = isTwinPrime(23);
-  std::cout << "For 23 the twin prime is " << twin << std::endl;
+  std::cout << "Is 23 a twin prime: " << twin << std::endl;
+
+  //Task F
+  int nextTwin = nextTwinPrime(a);
+  std::cout << "\nThe next twin prime after " << a << ": " << nextTwin << std::endl;
+
+  nextTwin = nextTwinPrime(c);
+  std::cout << "The next twin prime after " << c << ": " << nextTwin << std::endl;
+
+  //Task G
+  int largest = largestTwinPrime(d, c);
+  std::cout << "\nThe largest twin prime between " << d << " and " << c << ": " << largest << std::endl;
+
+  largest = largestTwinPrime(633, 814);
+  std::cout << "The largest twin prime between 633 and 814: " << largest << std::endl;
     
   return 0;
 }

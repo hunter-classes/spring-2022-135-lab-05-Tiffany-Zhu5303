@@ -58,6 +58,7 @@ TEST_CASE("number of primes"){
   CHECK(countPrimes(4, 18) == 5);
   CHECK(countPrimes(16, 22) == 2);
   CHECK(countPrimes(633, 814) == 26);
+  CHECK(countPrimes(1460, 1470) == 0);
 }
 
 TEST_CASE("is twin prime"){
@@ -68,4 +69,17 @@ TEST_CASE("is twin prime"){
 TEST_CASE("is not twin prime"){
   CHECK(isTwinPrime(1561) == 0);
   CHECK(isTwinPrime(2003) == 0);
+}
+
+TEST_CASE("next twin prime"){
+  CHECK(nextTwinPrime(101) == 103);
+  CHECK(nextTwinPrime(733) == 809);
+  CHECK(nextTwinPrime(1571) == 1607);
+}
+
+TEST_CASE("largest twin prime"){
+  //largest at the end of the range
+  CHECK(largestTwinPrime(18, 101) == 101);
+  //no twin primes
+  CHECK(largestTwinPrime(1327, 1370) == -1);
 }
